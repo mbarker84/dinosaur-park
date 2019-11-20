@@ -27,10 +27,14 @@
   z-index: 2;
   display: flex;
   align-items: center;
+  width: 300px;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+  background-color: #737949;
 }
 
 .section__title {
   margin: 0;
+  font-size: rem(22px);
 }
 
 .section__content {
@@ -64,7 +68,7 @@
 
   > * {
     opacity: 0;
-    transform: translate3d(0, 1rem, 0);
+    transform: translate3d(0, 4rem, 0);
     transition: opacity 800ms var(--delay),
       transform 800ms cubic-bezier(0.13, 0.07, 0.26, 0.99) var(--delay);
   }

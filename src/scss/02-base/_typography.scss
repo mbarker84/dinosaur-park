@@ -1,2 +1,26 @@
-$sm: 40em;
-$md: 60em;
+body {
+  font-family: $font-body;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+h1 {
+  @include bp($sm) {
+    font-size: rem(66px);
+  }
+
+  @include bp($md) {
+    font-size: rem(110px);
+  }
+}
+
+a {
+  color: inherit;
+}

@@ -11,16 +11,6 @@ const callback = (entries, observer) => {
     if (entry.intersectionRatio >= 0.75) {
       const { target } = entry;
       target.classList.toggle("is-visible");
-
-      // const sectionChildren = [
-      //   ...target.querySelector("[data-content]").children
-      // ];
-
-      // sectionChildren.forEach((el, index) => {
-      //   el.style.setProperty("--delay", `${index * 100}ms`);
-      // });
-
-      // console.log(sectionChildren);
     }
   });
 };
@@ -36,3 +26,10 @@ sections.forEach((section, index) => {
 
   observer.observe(section);
 });
+
+/* Remove no-js class on load */
+const removeClass = () => {
+  document.body.classList.remove("no-js");
+};
+
+window.onload(removeClass());

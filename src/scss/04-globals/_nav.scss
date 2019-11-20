@@ -1,6 +1,41 @@
 .nav__list {
   display: flex;
-  height: rem(60px);
+  height: rem(80px);
   align-items: center;
   justify-content: flex-end;
+  padding: rem(10px) rem(20px);
+}
+
+.nav__item {
+  a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: rem(12px) rem(20px);
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav__item--cta {
+  a {
+    font-family: $font-heading;
+    font-size: rem(20px);
+    text-transform: uppercase;
+    line-height: 1;
+    color: black;
+    background: $primary;
+    border-radius: rem(6px);
+    min-width: rem(180px);
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: darken($primary, 15%);
+    }
+  }
 }
